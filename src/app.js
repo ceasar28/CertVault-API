@@ -23,9 +23,9 @@ const data = new csv({
 });
 data.save();
 
-const user = csvs.findOne({ name: "fake" });
+const user = csv.findOne({ id: "fake" });
 
-console.log(user.csv);
+console.log(JSON.stringify({ user }));
 // spin up the server
 
 console.log();
