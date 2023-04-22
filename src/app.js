@@ -3,10 +3,23 @@ const app = express();
 const PORT = 5000;
 
 //Middlewares
+const fs = require("fs");
+
+fs.readFile("/Users/joe/test.txt", "utf8", (err, data) => {
+  if (err) {
+    console.error(err);
+    return;
+  }
+  console.log(data);
+});
 
 const csv = require("./models/certModal");
 
-const data = new csv({});
+const data = new csv({
+  signer: "emmanuel",
+  name: "fake",
+  csv: ".",
+});
 
 // spin up the server
 
