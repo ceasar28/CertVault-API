@@ -9,7 +9,7 @@ const PORT = 5000;
 const connectDb = require("../config/database");
 const serverUp = async () => {
   try {
-    const connected = await connectDb("mongodb://27017/certVault_DB");
+    const connected = await connectDb("mongodb://localhost:27017/certVault_DB");
     app.listen(PORT, () => {
       return console.log(`Server is listening on port:${PORT}`);
     });
