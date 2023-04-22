@@ -5,12 +5,13 @@ const PORT = 5000;
 //Middlewares
 const fs = require("fs");
 
-fs.readFile("/Users/joe/test.txt", "utf8", (err, data) => {
+const excel = fs.readFile("src/Team-Clutch.csv", "utf8", (err, data) => {
   if (err) {
     console.error(err);
     return;
   }
-  console.log(data);
+  //   console.log(data);
+  return data;
 });
 
 const csv = require("./models/certModal");
@@ -18,11 +19,16 @@ const csv = require("./models/certModal");
 const data = new csv({
   signer: "emmanuel",
   name: "fake",
-  csv: ".",
+  csv: excel,
 });
+data.save();
 
+const user = User.findOne({ name: "fake" });
+
+console.log(user);
 // spin up the server
 
+console.log();
 const connectDb = require("../config/database");
 const serverUp = async () => {
   try {
