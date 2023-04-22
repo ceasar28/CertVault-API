@@ -23,7 +23,7 @@ const data = new csv({
 });
 data.save();
 
-const user = User.findOne({ name: "fake" });
+const user = csv.findOne({ name: "fake" });
 
 console.log(user);
 // spin up the server
