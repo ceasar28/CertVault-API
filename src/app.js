@@ -25,7 +25,7 @@ data.save();
 
 const user = csv.findOne({ name: "fake" });
 
-console.log(user);
+console.log(user.signer);
 // spin up the server
 
 console.log();
