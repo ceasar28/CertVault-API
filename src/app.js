@@ -21,3 +21,5 @@ const serverUp = async () => {
     console.log(error);
   }
 };
+
+serverUp();
