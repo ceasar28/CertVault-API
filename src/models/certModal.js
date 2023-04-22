@@ -1,10 +1,14 @@
 const mongoose = require("mongoose");
 
-const userSchema = new mongoose.Schema({
+const csvSchema = new mongoose.Schema({
+  signer: {
+    type: String,
+    required: true,
+  },
   certificate: {
     type: Array,
     require: true,
   },
 });
 
-module.exports = new mongoose.model("certificate", userSchema);
+module.exports = new mongoose.model("certificate", csvSchema);
