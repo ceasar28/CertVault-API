@@ -1,14 +1,10 @@
 const mongoose = require("mongoose");
 
 const userSchema = new mongoose.Schema({
-  user: {
-    type: String,
+  certificate: {
+    type: Array,
     require: true,
-  },
-  date: {
-    type: Date,
-    default: Date.now,
   },
 });
 
-module.exports = new mongoose.model("user", userSchema);
+module.exports = new mongoose.model("certificate", userSchema);
