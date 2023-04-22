@@ -5,8 +5,12 @@ const csvSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  certificate: {
-    type: Array,
+  name: {
+    type: String,
+    required: true,
+  },
+  csv: {
+    type: String,
     require: true,
   },
 });
