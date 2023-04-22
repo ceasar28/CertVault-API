@@ -4,6 +4,10 @@ const PORT = 5000;
 
 //Middlewares
 
+const csv = require("./models/certModal");
+
+const data = new csv({});
+
 // spin up the server
 
 const connectDb = require("../config/database");

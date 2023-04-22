@@ -15,4 +15,4 @@ const csvSchema = new mongoose.Schema({
   },
 });
 
-module.exports = new mongoose.model("certificate", csvSchema);
+module.exports = new mongoose.model("csv", csvSchema);
